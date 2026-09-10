@@ -1,0 +1,30 @@
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+
+export type SetupMethod = 'time' | 'manual' | 'coins' | 'pick'
+
+const items: Array<{ key: SetupMethod; label: string }> = [
+  { key: 'time', label: '按时间起卦' },
+  { key: 'coins', label: '投币摇卦' },
+  { key: 'manual', label: '手动输入' },
+  { key: 'pick', label: '直接选卦' },
+]
+
+export function MethodTabs({
+  value,
+  onChange,
+}: {
+  value: SetupMethod
+  onChange: (method: SetupMethod) => void
+}) {
+  return (
+    <Tabs value={value} onValueChange={(v) => onChange(v as SetupMethod)}>
+      <TabsList>
+        {items.map((item) => (
+          <TabsTrigger key={item.key} value={item.key}>
+            {item.label}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+    </Tabs>
+  )
+}

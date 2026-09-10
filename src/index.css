@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@import './styles/themes.css';
+
+@theme {
+  --font-sans: var(--liuyao-font-sans);
+  --font-serif: var(--liuyao-font-serif);
+
+  --color-bg: var(--liuyao-bg);
+  --color-surface: var(--liuyao-surface);
+  --color-border: var(--liuyao-border);
+  --color-text: var(--liuyao-text);
+  --color-text-muted: var(--liuyao-text-muted);
+  --color-accent: var(--liuyao-accent);
+
+  --color-yang: var(--liuyao-yang);
+  --color-yin: var(--liuyao-yin);
+  --color-moving: var(--liuyao-moving);
+  --color-void: var(--liuyao-void);
+  --color-broken: var(--liuyao-broken);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}

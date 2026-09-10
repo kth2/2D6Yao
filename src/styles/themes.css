@@ -1,0 +1,67 @@
+/**
+ * Theme tokens for 六爻 PWA.
+ * Two style families (modern / classical) toggled via [data-style] on <html>,
+ * each with light/dark variants toggled via [data-theme] or prefers-color-scheme.
+ */
+
+:root {
+  --liuyao-font-sans: system-ui, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --liuyao-font-serif: 'Songti SC', 'Noto Serif SC', serif;
+
+  --liuyao-bg: #ffffff;
+  --liuyao-surface: #f7f6f9;
+  --liuyao-border: #e5e4e7;
+  --liuyao-text: #1a1523;
+  --liuyao-text-muted: #6b6375;
+  --liuyao-accent: #aa3bff;
+
+  /* 爻/卦盘专用语义色 */
+  --liuyao-yang: #1a1523;
+  --liuyao-yin: #1a1523;
+  --liuyao-moving: #d4380d;
+  --liuyao-void: #8c8c8c;
+  --liuyao-broken: #d48806;
+}
+
+:root:not([data-theme='light']) {
+  @media (prefers-color-scheme: dark) {
+    --liuyao-bg: #16171d;
+    --liuyao-surface: #1f2028;
+    --liuyao-border: #2e303a;
+    --liuyao-text: #f3f4f6;
+    --liuyao-text-muted: #9ca3af;
+    --liuyao-accent: #c084fc;
+
+    --liuyao-yang: #f3f4f6;
+    --liuyao-yin: #f3f4f6;
+    --liuyao-moving: #ff7a45;
+    --liuyao-void: #8c8c8c;
+    --liuyao-broken: #ffc53d;
+  }
+}
+
+:root[data-theme='dark'] {
+  --liuyao-bg: #16171d;
+  --liuyao-surface: #1f2028;
+  --liuyao-border: #2e303a;
+  --liuyao-text: #f3f4f6;
+  --liuyao-text-muted: #9ca3af;
+  --liuyao-accent: #c084fc;
+
+  --liuyao-yang: #f3f4f6;
+  --liuyao-yin: #f3f4f6;
+  --liuyao-moving: #ff7a45;
+  --liuyao-void: #8c8c8c;
+  --liuyao-broken: #ffc53d;
+}
+
+/* 古典风格：宣纸底、墨色文字、衬线标题 */
+:root[data-style='classical'] {
+  --liuyao-bg: #f4ecd8;
+  --liuyao-surface: #ece0c4;
+  --liuyao-border: #cbb98f;
+  --liuyao-text: #2b2118;
+  --liuyao-text-muted: #6b5b45;
+  --liuyao-accent: #9a2b1f;
+  --liuyao-font-sans: var(--liuyao-font-serif);
+}
