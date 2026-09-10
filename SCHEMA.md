@@ -117,3 +117,68 @@ App 出断语时的调用链：
 ```
 
 LLM 不做推理，只做措辞。断错了能追到是哪条规则、哪个书例，可修可查。
+
+
+---
+
+## 卦盘挂接（已完成）
+
+`corpus/cases.jsonl` 里每条已带 `gua` 字段：
+
+```jsonc
+"gua": {
+  "ben": "水风井", "bian": "水泽节", "dong_yao": [1, 3],
+  "gong": "震", "shi": 5, "ying": 2,
+  "source_page": 21,
+  "ocr_margin": 8,                                  // OCR 第一名与第二名的分差
+  "text_check": { "ratio": 1.0, "hit": 4, "claims": 4 },  // 正文佐证命中率
+  "confidence": "high"
+}
+```
+
+`confidence` 的判定：
+
+| 值 | 条件 | 数量 |
+|---|---|---|
+| `high` | 正文点名 ≥3 个爻，命中率 ≥0.6 | 160 |
+| `medium` | 正文佐证 ≥3 条但命中率中等，或 OCR 分差 ≥5 | 281 |
+| `low` | 佐证不足且 OCR 分差小 | 64 |
+| `review` | 正文佐证 ≥3 条却命中率 <0.3，附 `text_best_alt` 候选 | 36 |
+| `null` | 该例未找到卦盘图 | 62 |
+
+**两条相互独立的校验**：
+
+1. OCR 读到的动爻标记（`0` / `x`）个数 vs 本卦、变卦逐爻比对得出的动爻数 —— **502 例全部一致，0 例冲突**
+2. 解析正文点名的爻（「官鬼申金」「财爻戌土持世」「五爻亥水」）vs 认出的卦的六亲纳支 —— 这条与 OCR 完全无关
+
+## 标签体系
+
+41 个标签，四组：
+
+- `yongshen_*` 用神体系：`yongshen_chishi`（谁持世，明细在 `tag_detail.chishi`）、`yongshen_declared`、`jishen`、`yuanshen`、`buashanggua`、`liangxian`
+- 旺衰状态：`wangxiang` `shuairuo` `xunkong` `chukong` `tianshi` `suipo` `yuepo` `ripo` `rumu` `kaiku`
+- 爻间关系：`sanxing` `liuchong` `liuhe` `sanhe_ju` `sanhui_ju` `huitou_sheng` `huitou_ke` `jinshen` `tuishen` `tongguan` `andong` `hezou` `kexie_jiaojia` `shiying`
+- 格局与外部：`taisui` `yuejian` `richen` `fushen` `fanyin` `fuyin` `cong_ge` `youhun` `guihun` `dufa` `liushen`
+
+标签只标「有没有出现」这个事实，不做吉凶判断 —— 吉凶留给规则库。
+
+规则条文用**同一套标签**，于是两边可以互查：
+
+- `cases[].related_rules` → `[{rule_id, shared_tags, same_chapter}]`（同章优先）
+- `rules[].example_cases` → `[case_seq]`
+
+## `corpus/index.json`
+
+```jsonc
+{
+  "case_by_tag":  { "sanhe_ju": [12, 18, ...] },
+  "rule_by_tag":  { "sanhe_ju": ["一-一1-31", ...] },
+  "case_by_gua":  { "水风井": [12, ...] },        // 62 个不同本卦
+  "case_by_chapter": { "财运": [...] }
+}
+```
+
+## `reference/gua_tables.jsonl`
+
+670 张卦盘的识别结果原始记录（页码、图序、本卦、变卦、动爻、OCR 分数），
+便于回查与重标。
