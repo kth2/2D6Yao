@@ -1,0 +1,4354 @@
+{
+ "乾为天": {
+  "name": "乾为天",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "本宫",
+  "inner": "乾",
+  "outer": "乾",
+  "lines": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "天风姤": {
+  "name": "天风姤",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "一世",
+  "inner": "巽",
+  "outer": "乾",
+  "lines": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "天山遁": {
+  "name": "天山遁",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "二世",
+  "inner": "艮",
+  "outer": "乾",
+  "lines": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "天地否": {
+  "name": "天地否",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "三世",
+  "inner": "坤",
+  "outer": "乾",
+  "lines": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "风地观": {
+  "name": "风地观",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "四世",
+  "inner": "坤",
+  "outer": "巽",
+  "lines": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "山地剥": {
+  "name": "山地剥",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "五世",
+  "inner": "坤",
+  "outer": "艮",
+  "lines": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "火地晋": {
+  "name": "火地晋",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "游魂",
+  "inner": "坤",
+  "outer": "离",
+  "lines": [
+   0,
+   0,
+   0,
+   1,
+   0,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "火天大有": {
+  "name": "火天大有",
+  "gong": "乾",
+  "gong_wuxing": "金",
+  "shi_class": "归魂",
+  "inner": "乾",
+  "outer": "离",
+  "lines": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "坎为水": {
+  "name": "坎为水",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "本宫",
+  "inner": "坎",
+  "outer": "坎",
+  "lines": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   0
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "水泽节": {
+  "name": "水泽节",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "一世",
+  "inner": "兑",
+  "outer": "坎",
+  "lines": [
+   1,
+   1,
+   0,
+   0,
+   1,
+   0
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "水雷屯": {
+  "name": "水雷屯",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "二世",
+  "inner": "震",
+  "outer": "坎",
+  "lines": [
+   1,
+   0,
+   0,
+   0,
+   1,
+   0
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "水火既济": {
+  "name": "水火既济",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "三世",
+  "inner": "离",
+  "outer": "坎",
+  "lines": [
+   1,
+   0,
+   1,
+   0,
+   1,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "泽火革": {
+  "name": "泽火革",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "四世",
+  "inner": "离",
+  "outer": "兑",
+  "lines": [
+   1,
+   0,
+   1,
+   1,
+   1,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "雷火丰": {
+  "name": "雷火丰",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "五世",
+  "inner": "离",
+  "outer": "震",
+  "lines": [
+   1,
+   0,
+   1,
+   1,
+   0,
+   0
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "地火明夷": {
+  "name": "地火明夷",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "游魂",
+  "inner": "离",
+  "outer": "坤",
+  "lines": [
+   1,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "地水师": {
+  "name": "地水师",
+  "gong": "坎",
+  "gong_wuxing": "水",
+  "shi_class": "归魂",
+  "inner": "坎",
+  "outer": "坤",
+  "lines": [
+   0,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "艮为山": {
+  "name": "艮为山",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "本宫",
+  "inner": "艮",
+  "outer": "艮",
+  "lines": [
+   0,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "山火贲": {
+  "name": "山火贲",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "一世",
+  "inner": "离",
+  "outer": "艮",
+  "lines": [
+   1,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "山天大畜": {
+  "name": "山天大畜",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "二世",
+  "inner": "乾",
+  "outer": "艮",
+  "lines": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   1
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "山泽损": {
+  "name": "山泽损",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "三世",
+  "inner": "兑",
+  "outer": "艮",
+  "lines": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "火泽睽": {
+  "name": "火泽睽",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "四世",
+  "inner": "兑",
+  "outer": "离",
+  "lines": [
+   1,
+   1,
+   0,
+   1,
+   0,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "天泽履": {
+  "name": "天泽履",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "五世",
+  "inner": "兑",
+  "outer": "乾",
+  "lines": [
+   1,
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "风泽中孚": {
+  "name": "风泽中孚",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "游魂",
+  "inner": "兑",
+  "outer": "巽",
+  "lines": [
+   1,
+   1,
+   0,
+   0,
+   1,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "风山渐": {
+  "name": "风山渐",
+  "gong": "艮",
+  "gong_wuxing": "土",
+  "shi_class": "归魂",
+  "inner": "艮",
+  "outer": "巽",
+  "lines": [
+   0,
+   0,
+   1,
+   0,
+   1,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "震为雷": {
+  "name": "震为雷",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "本宫",
+  "inner": "震",
+  "outer": "震",
+  "lines": [
+   1,
+   0,
+   0,
+   1,
+   0,
+   0
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "雷地豫": {
+  "name": "雷地豫",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "一世",
+  "inner": "坤",
+  "outer": "震",
+  "lines": [
+   0,
+   0,
+   0,
+   1,
+   0,
+   0
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "雷水解": {
+  "name": "雷水解",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "二世",
+  "inner": "坎",
+  "outer": "震",
+  "lines": [
+   0,
+   1,
+   0,
+   1,
+   0,
+   0
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "雷风恒": {
+  "name": "雷风恒",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "三世",
+  "inner": "巽",
+  "outer": "震",
+  "lines": [
+   0,
+   1,
+   1,
+   1,
+   0,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "地风升": {
+  "name": "地风升",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "四世",
+  "inner": "巽",
+  "outer": "坤",
+  "lines": [
+   0,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   }
+  ]
+ },
+ "水风井": {
+  "name": "水风井",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "五世",
+  "inner": "巽",
+  "outer": "坎",
+  "lines": [
+   0,
+   1,
+   1,
+   0,
+   1,
+   0
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "泽风大过": {
+  "name": "泽风大过",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "游魂",
+  "inner": "巽",
+  "outer": "兑",
+  "lines": [
+   0,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "泽雷随": {
+  "name": "泽雷随",
+  "gong": "震",
+  "gong_wuxing": "木",
+  "shi_class": "归魂",
+  "inner": "震",
+  "outer": "兑",
+  "lines": [
+   1,
+   0,
+   0,
+   1,
+   1,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "巽为风": {
+  "name": "巽为风",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "本宫",
+  "inner": "巽",
+  "outer": "巽",
+  "lines": [
+   0,
+   1,
+   1,
+   0,
+   1,
+   1
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "风天小畜": {
+  "name": "风天小畜",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "一世",
+  "inner": "乾",
+  "outer": "巽",
+  "lines": [
+   1,
+   1,
+   1,
+   0,
+   1,
+   1
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "风火家人": {
+  "name": "风火家人",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "二世",
+  "inner": "离",
+  "outer": "巽",
+  "lines": [
+   1,
+   0,
+   1,
+   0,
+   1,
+   1
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "风雷益": {
+  "name": "风雷益",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "三世",
+  "inner": "震",
+  "outer": "巽",
+  "lines": [
+   1,
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "天雷无妄": {
+  "name": "天雷无妄",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "四世",
+  "inner": "震",
+  "outer": "乾",
+  "lines": [
+   1,
+   0,
+   0,
+   1,
+   1,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "火雷噬嗑": {
+  "name": "火雷噬嗑",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "五世",
+  "inner": "震",
+  "outer": "离",
+  "lines": [
+   1,
+   0,
+   0,
+   1,
+   0,
+   1
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "山雷颐": {
+  "name": "山雷颐",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "游魂",
+  "inner": "震",
+  "outer": "艮",
+  "lines": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "山风蛊": {
+  "name": "山风蛊",
+  "gong": "巽",
+  "gong_wuxing": "木",
+  "shi_class": "归魂",
+  "inner": "巽",
+  "outer": "艮",
+  "lines": [
+   0,
+   1,
+   1,
+   0,
+   0,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "离为火": {
+  "name": "离为火",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "本宫",
+  "inner": "离",
+  "outer": "离",
+  "lines": [
+   1,
+   0,
+   1,
+   1,
+   0,
+   1
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "火山旅": {
+  "name": "火山旅",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "一世",
+  "inner": "艮",
+  "outer": "离",
+  "lines": [
+   0,
+   0,
+   1,
+   1,
+   0,
+   1
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "火风鼎": {
+  "name": "火风鼎",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "二世",
+  "inner": "巽",
+  "outer": "离",
+  "lines": [
+   0,
+   1,
+   1,
+   1,
+   0,
+   1
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "火水未济": {
+  "name": "火水未济",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "三世",
+  "inner": "坎",
+  "outer": "离",
+  "lines": [
+   0,
+   1,
+   0,
+   1,
+   0,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "山水蒙": {
+  "name": "山水蒙",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "四世",
+  "inner": "坎",
+  "outer": "艮",
+  "lines": [
+   0,
+   1,
+   0,
+   0,
+   0,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "风水涣": {
+  "name": "风水涣",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "五世",
+  "inner": "坎",
+  "outer": "巽",
+  "lines": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   1
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "辛",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "辛",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "天水讼": {
+  "name": "天水讼",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "游魂",
+  "inner": "坎",
+  "outer": "乾",
+  "lines": [
+   0,
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "天火同人": {
+  "name": "天火同人",
+  "gong": "离",
+  "gong_wuxing": "火",
+  "shi_class": "归魂",
+  "inner": "离",
+  "outer": "乾",
+  "lines": [
+   1,
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "己",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "己",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阳",
+    "gan": "壬",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "坤为地": {
+  "name": "坤为地",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "本宫",
+  "inner": "坤",
+  "outer": "坤",
+  "lines": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "地雷复": {
+  "name": "地雷复",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "一世",
+  "inner": "震",
+  "outer": "坤",
+  "lines": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "地泽临": {
+  "name": "地泽临",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "二世",
+  "inner": "兑",
+  "outer": "坤",
+  "lines": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "地天泰": {
+  "name": "地天泰",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "三世",
+  "inner": "乾",
+  "outer": "坤",
+  "lines": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "雷天大壮": {
+  "name": "雷天大壮",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "四世",
+  "inner": "乾",
+  "outer": "震",
+  "lines": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "泽天夬": {
+  "name": "泽天夬",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "五世",
+  "inner": "乾",
+  "outer": "兑",
+  "lines": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   0
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "水天需": {
+  "name": "水天需",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "游魂",
+  "inner": "乾",
+  "outer": "坎",
+  "lines": [
+   1,
+   1,
+   1,
+   0,
+   1,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "甲",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "水地比": {
+  "name": "水地比",
+  "gong": "坤",
+  "gong_wuxing": "土",
+  "shi_class": "归魂",
+  "inner": "坤",
+  "outer": "坎",
+  "lines": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "妻财"
+   }
+  ]
+ },
+ "兑为泽": {
+  "name": "兑为泽",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "本宫",
+  "inner": "兑",
+  "outer": "兑",
+  "lines": [
+   1,
+   1,
+   0,
+   1,
+   1,
+   0
+  ],
+  "shi": 6,
+  "ying": 3,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "泽水困": {
+  "name": "泽水困",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "一世",
+  "inner": "坎",
+  "outer": "兑",
+  "lines": [
+   0,
+   1,
+   0,
+   1,
+   1,
+   0
+  ],
+  "shi": 1,
+  "ying": 4,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "寅",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "泽地萃": {
+  "name": "泽地萃",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "二世",
+  "inner": "坤",
+  "outer": "兑",
+  "lines": [
+   0,
+   0,
+   0,
+   1,
+   1,
+   0
+  ],
+  "shi": 2,
+  "ying": 5,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "乙",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "泽山咸": {
+  "name": "泽山咸",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "三世",
+  "inner": "艮",
+  "outer": "兑",
+  "lines": [
+   0,
+   0,
+   1,
+   1,
+   1,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "未",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "水山蹇": {
+  "name": "水山蹇",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "四世",
+  "inner": "艮",
+  "outer": "坎",
+  "lines": [
+   0,
+   0,
+   1,
+   0,
+   1,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阳",
+    "gan": "戊",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "戊",
+    "zhi": "子",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   }
+  ]
+ },
+ "地山谦": {
+  "name": "地山谦",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "五世",
+  "inner": "艮",
+  "outer": "坤",
+  "lines": [
+   0,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  "shi": 5,
+  "ying": 2,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "亥",
+    "wuxing": "水",
+    "liuqin": "子孙"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "癸",
+    "zhi": "酉",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   }
+  ]
+ },
+ "雷山小过": {
+  "name": "雷山小过",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "游魂",
+  "inner": "艮",
+  "outer": "震",
+  "lines": [
+   0,
+   0,
+   1,
+   1,
+   0,
+   0
+  ],
+  "shi": 4,
+  "ying": 1,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "辰",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阴",
+    "gan": "丙",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阳",
+    "gan": "丙",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ },
+ "雷泽归妹": {
+  "name": "雷泽归妹",
+  "gong": "兑",
+  "gong_wuxing": "金",
+  "shi_class": "归魂",
+  "inner": "兑",
+  "outer": "震",
+  "lines": [
+   1,
+   1,
+   0,
+   1,
+   0,
+   0
+  ],
+  "shi": 3,
+  "ying": 6,
+  "yao": [
+   {
+    "pos": 1,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "巳",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 2,
+    "yin_yang": "阳",
+    "gan": "丁",
+    "zhi": "卯",
+    "wuxing": "木",
+    "liuqin": "妻财"
+   },
+   {
+    "pos": 3,
+    "yin_yang": "阴",
+    "gan": "丁",
+    "zhi": "丑",
+    "wuxing": "土",
+    "liuqin": "父母"
+   },
+   {
+    "pos": 4,
+    "yin_yang": "阳",
+    "gan": "庚",
+    "zhi": "午",
+    "wuxing": "火",
+    "liuqin": "官鬼"
+   },
+   {
+    "pos": 5,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "申",
+    "wuxing": "金",
+    "liuqin": "兄弟"
+   },
+   {
+    "pos": 6,
+    "yin_yang": "阴",
+    "gan": "庚",
+    "zhi": "戌",
+    "wuxing": "土",
+    "liuqin": "父母"
+   }
+  ]
+ }
+}
