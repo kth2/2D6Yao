@@ -2,6 +2,8 @@
 
 传统六爻起卦、排盘、断卦的 Progressive Web App。
 
+线上地址：<https://kth2.github.io/2D6Yao/>（手机浏览器打开，「添加到主屏幕」即可当 App 用，装完可离线）
+
 ## 运行
 
 ```bash
@@ -11,13 +13,23 @@ npm run build    # 生产构建（含 PWA/Service Worker）
 npm run lint      # oxlint 检查
 ```
 
+推到 `main` 或 `claude/**` 分支会自动构建并发布到 GitHub Pages
+（`.github/workflows/deploy.yml`；子目录部署靠 `BASE_PATH=/2D6Yao/`）。
+
+## AI 断卦设置
+
+「设置」页填接口地址与 API key，点「测试连接并读取模型」，应用会拉取该服务商的模型清单
+让你从中选择；能从价格字段判断出免费模型的（如 OpenRouter 的 `:free`）会标【免费】并排在前面。
+支持两种接口格式：OpenAI 兼容（OpenRouter / Groq / Gemini / 硅基流动 / DeepSeek / 本机 Ollama 等）
+与 Anthropic 原生。密钥只存在本机浏览器，浏览器直连服务商，不经中转；不填也能用，
+去「解卦」复制提示词自己去问。
+
 ## 技术栈与结构
 
 - Vite + React 19 + TypeScript + Tailwind CSS v4
 - **mingyu-core** 作为六爻排盘 / 神煞 / 历法的计算引擎（`src/engine/` 是唯一调用入口，UI 不直接碰底层库）
 - zustand 做状态、Dexie（IndexedDB）做本地历史记录、vite-plugin-pwa 提供离线/安装能力
-- 断卦调用 Claude（`@anthropic-ai/sdk`，流式）。API key 由用户自己填，只存在本机浏览器
-  的 localStorage 里，浏览器直连 Anthropic，不经任何中转；不填也能用，复制提示词自己去问。
+- 断卦支持任意 OpenAI 兼容服务商与 Anthropic 原生接口，流式返回，见上「AI 断卦设置」。
 
 ```
 src/
