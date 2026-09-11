@@ -1,19 +1,30 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useChart } from '@/hooks/useChart'
 import { extractChartTags, extractEvidenceTags } from '@/engine/chartTags'
-import { listChapters, loadRules, matchRules, type CorpusRule } from '@/engine/corpus'
+import {
+  listChapters,
+  loadCases,
+  loadRules,
+  matchCases,
+  matchRules,
+  type CorpusCase,
+  type CorpusRule,
+} from '@/engine/corpus'
 import { analyzeEvidence, sixRelatives, type SixRelative } from '@/engine/yongshen'
 import { Button } from '@/components/ui/button'
 import { YongshenPanel } from './YongshenPanel'
 import { ChartTagList } from './ChartTagList'
 import { RuleMatches } from './RuleMatches'
+import { CaseMatches } from './CaseMatches'
 import { PromptPreview } from './PromptPreview'
 
 const pageSize = 8
+const caseCount = 3
 
 export function InterpretationPanel() {
   const { chart } = useChart()
   const [rules, setRules] = useState<CorpusRule[] | null>(null)
+  const [cases, setCases] = useState<CorpusCase[] | null>(null)
   const [failed, setFailed] = useState(false)
   const [chapter, setChapter] = useState('')
   const [relative, setRelative] = useState<SixRelative | ''>('')
@@ -24,6 +35,14 @@ export function InterpretationPanel() {
     loadRules().then(
       (loaded) => {
         if (!cancelled) setRules(loaded)
+      },
+      () => {
+        if (!cancelled) setFailed(true)
+      },
+    )
+    loadCases().then(
+      (loaded) => {
+        if (!cancelled) setCases(loaded)
       },
       () => {
         if (!cancelled) setFailed(true)
@@ -56,6 +75,16 @@ export function InterpretationPanel() {
     [rules, tags, chapter],
   )
   const shown = matches.slice(0, visible)
+  const caseMatches = useMemo(
+    () =>
+      cases && chart
+        ? matchCases(cases, tags, chart.liuyao.originalName, chapter || undefined).slice(
+            0,
+            caseCount,
+          )
+        : [],
+    [cases, chart, tags, chapter],
+  )
 
   if (!chart) {
     return <p className="text-sm text-text-muted">还没有卦盘，先去「起卦」生成一个。</p>
@@ -112,12 +141,20 @@ export function InterpretationPanel() {
         </Button>
       )}
 
+      <div className="flex flex-col gap-2">
+        <span className="text-sm text-text-muted">
+          相似书例{cases ? '' : '（正在载入书例库…）'}
+        </span>
+        {cases && <CaseMatches matches={caseMatches} tags={tags} />}
+      </div>
+
       <PromptPreview
         context={{
           questionType: chapter || undefined,
           evidence: evidence ?? undefined,
           tags,
           matches: shown,
+          cases: caseMatches,
         }}
       />
     </div>

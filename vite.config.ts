@@ -37,13 +37,18 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
-        // 汉字起卦的康熙笔画字库约 1.2MB，只有用到才下载，用过再离线缓存。
-        globIgnores: ['**/name-number-*.js'],
+        // 大字库（康熙笔画约 1.2MB、卦例库约 1.8MB）不进预缓存，用到才下载，用过再离线缓存。
+        globIgnores: ['**/name-number-*.js', '**/cases-*.js'],
         runtimeCaching: [
           {
             urlPattern: /\/assets\/name-number-.*\.js$/,
             handler: 'CacheFirst',
             options: { cacheName: 'kangxi-strokes', expiration: { maxEntries: 2 } },
+          },
+          {
+            urlPattern: /\/assets\/cases-.*\.js$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'liuyao-cases', expiration: { maxEntries: 2 } },
           },
         ],
       },

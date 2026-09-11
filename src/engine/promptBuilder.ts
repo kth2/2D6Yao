@@ -1,6 +1,6 @@
 import type { ChartData } from './types'
 import type { ChartTag } from './chartTags'
-import type { RuleMatch } from './corpus'
+import type { CaseMatch, RuleMatch } from './corpus'
 import type { ChartEvidence } from './yongshen'
 
 const positionLabels = ['初爻', '二爻', '三爻', '四爻', '五爻', '上爻']
@@ -11,6 +11,7 @@ export interface PromptContext {
   evidence?: ChartEvidence
   tags?: readonly ChartTag[]
   matches?: readonly RuleMatch[]
+  cases?: readonly CaseMatch[]
 }
 
 /** 把卦盘整理成结构化文本，供复制给 LLM 或人工断卦参考。 */
@@ -94,9 +95,29 @@ export function buildChartPrompt(chart: ChartData, context: PromptContext = {}):
     }
   }
 
+  if (context.cases && context.cases.length > 0) {
+    lines.push('', '相似书例（《六爻800例》）：')
+    for (const { entry, sameHexagram } of context.cases) {
+      const gua = entry.gua
+        ? `${entry.gua.ben}${entry.gua.bian ? `→${entry.gua.bian}` : ''}${sameHexagram ? '（与本卦同）' : ''}`
+        : '卦盘未识别'
+      lines.push(
+        `[书例#${entry.seq}]（${entry.chapter_name}·${gua}）问：${entry.question_raw}`,
+        `断：${truncate(entry.analysis, 800)}`,
+      )
+      if (entry.note) lines.push(`注释：${entry.note}`)
+      for (const item of entry.yingqi) lines.push(`应期 ${item.ganzhi}：${item.text}`)
+    }
+  }
+
   lines.push('', buildInstruction())
 
   return lines.join('\n')
+}
+
+/** 极少数书例正文长达数千字，截断以免一条书例挤掉其它证据。 */
+function truncate(text: string, limit: number): string {
+  return text.length <= limit ? text : `${text.slice(0, limit)}……（余文从略）`
 }
 
 /** 与 SCHEMA.md 的分工一致：盘面事实既定，推理归 LLM，但每步要带依据。 */
@@ -104,6 +125,6 @@ function buildInstruction(): string {
   return [
     '以上盘面事实由排盘引擎算出，是既定输入：纳甲、六亲、世应、旺衰、旬空、月破日破、伏神、动变一律照用，不要重算或改写。',
     '请在此基础上推理：先判用神旺衰与生克关系，再权衡命中条文（条文之间可能互相矛盾，需说明为何取此舍彼），然后给出结论与应期。',
-    '每条结论标明依据：「依据 [条文编号]」或「推断」；证据不足处直说不足，不要凑。',
+    '每条结论标明依据：「依据 [条文编号]」「参照 [书例#编号]」或「推断」；证据不足处直说不足，不要凑。',
   ].join('\n')
 }
