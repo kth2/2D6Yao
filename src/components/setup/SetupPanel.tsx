@@ -1,15 +1,10 @@
 import { useCallback, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { useChart } from '@/hooks/useChart'
-import {
-  fromCoinThrows,
-  fromHexagramName,
-  fromManualYaos,
-  fromTime,
-  fromYarrow,
-} from '@/engine/inputMethods'
+import { fromCoinThrows, fromManualYaos, fromTime, fromYarrow } from '@/engine/inputMethods'
+import { getHexagramByName } from '@/engine/hexagramTable'
 import type { NumberCast } from '@/engine/numberCast'
-import type { YaoValue } from '@/engine/yaoValue'
+import { applyLines, type YaoValue } from '@/engine/yaoValue'
 import { MethodTabs, type SetupMethod } from './MethodTabs'
 import { TimeBasedInput } from './TimeBasedInput'
 import { CoinToss } from './CoinToss'
@@ -17,13 +12,15 @@ import { NumberInput } from './NumberInput'
 import { CharacterInput } from './CharacterInput'
 import { ManualLineInput } from './ManualLineInput'
 import { HexagramPicker } from './HexagramPicker'
+import { TrigramPicker } from './TrigramPicker'
+import { HexagramPreview } from './HexagramPreview'
 import { MovingLinesSelector } from './MovingLinesSelector'
 
 const defaultYaos: YaoValue[] = [7, 7, 7, 7, 7, 7]
 
 export function SetupPanel({ onGenerated }: { onGenerated?: () => void }) {
   const { regenerate } = useChart()
-  const [method, setMethod] = useState<SetupMethod>('time')
+  const [method, setMethod] = useState<SetupMethod>('pick')
   const [date, setDate] = useState(() => new Date())
   const [yaos, setYaos] = useState<YaoValue[]>(defaultYaos)
   const [coinThrows, setCoinThrows] = useState<Parameters<typeof fromCoinThrows>[0]>([])
@@ -75,16 +72,23 @@ export function SetupPanel({ onGenerated }: { onGenerated?: () => void }) {
       {method === 'coins' && <CoinToss onChange={setCoinThrows} />}
       {method === 'number' && <NumberInput onCast={handleCast} />}
       {method === 'character' && <CharacterInput onCast={handleCast} />}
-      {method === 'manual' && <ManualLineInput yaos={yaos} onChange={setYaos} />}
+      {method === 'manual' && (
+        <div className="flex flex-col gap-3">
+          <ManualLineInput yaos={yaos} onChange={setYaos} />
+          <HexagramPreview yaos={yaos} />
+        </div>
+      )}
       {method === 'pick' && (
         <div className="flex flex-col gap-3">
+          <TrigramPicker yaos={yaos} onChange={setYaos} />
           <HexagramPicker
             onSelect={(name) => {
-              const options = fromHexagramName(name)
-              if (options?.method === 'manual') setYaos(options.yaos as YaoValue[])
+              const hexagram = getHexagramByName(name)
+              if (hexagram) setYaos(applyLines(yaos, hexagram.lines))
             }}
           />
           <MovingLinesSelector yaos={yaos} onChange={setYaos} />
+          <HexagramPreview yaos={yaos} />
         </div>
       )}
 

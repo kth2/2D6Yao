@@ -1,5 +1,4 @@
 import type { LiuyaoGenerationOptions } from './liuyao'
-import { getHexagramById, getHexagramByName, linesToStaticYaoArray } from './hexagramTable'
 
 /** 手动逐爻输入：初爻→上爻，每爻 6/7/8/9。 */
 export function fromManualYaos(yaos: readonly number[]): LiuyaoGenerationOptions {
@@ -21,18 +20,4 @@ export function fromTime(): LiuyaoGenerationOptions {
 /** 蓍草十八变（大衍之数四十九策），分堆由引擎完成。 */
 export function fromYarrow(): LiuyaoGenerationOptions {
   return { method: 'yarrow' }
-}
-
-/** 直接选定本卦（按卦名），起始为全静爻，动爻由用户在设置里再勾选。 */
-export function fromHexagramName(name: string): LiuyaoGenerationOptions | null {
-  const hexagram = getHexagramByName(name)
-  if (!hexagram) return null
-  return { method: 'manual', yaos: linesToStaticYaoArray(hexagram.lines) }
-}
-
-/** 直接选定本卦（按 1-64 编号）。 */
-export function fromHexagramId(id: number): LiuyaoGenerationOptions | null {
-  const hexagram = getHexagramById(id)
-  if (!hexagram) return null
-  return { method: 'manual', yaos: linesToStaticYaoArray(hexagram.lines) }
 }

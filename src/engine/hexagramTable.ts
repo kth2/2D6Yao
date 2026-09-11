@@ -9,7 +9,29 @@ export interface HexagramLines {
   lines: HexagramLineArray
 }
 
+export interface Trigram {
+  name: string
+  symbol: string
+  /** 卦象所主之物：天泽火雷风水山地。 */
+  nature: string
+  lines: HexagramLineArray
+}
+
 const trigramsByName = new Map(Object.values(trigramsByIndex).map((t) => [t.name, t]))
+
+/** 先天八卦次序：乾一兑二离三震四巽五坎六艮七坤八。 */
+const trigramList: Trigram[] = Object.keys(trigramsByIndex)
+  .map(Number)
+  .sort((a, b) => a - b)
+  .map((index) => {
+    const trigram = trigramsByIndex[index]
+    return {
+      name: trigram.name,
+      symbol: trigram.symbol,
+      nature: trigram.nature,
+      lines: trigram.lines as HexagramLineArray,
+    }
+  })
 
 function toLines(upperName: string, lowerName: string): HexagramLineArray {
   const lower = trigramsByName.get(lowerName)
@@ -22,12 +44,6 @@ function toLines(upperName: string, lowerName: string): HexagramLineArray {
 
 export function getHexagramByName(name: string): HexagramLines | null {
   const entry = hexagramsData.find((h) => h.name === name)
-  if (!entry) return null
-  return { id: entry.id, name: entry.name, lines: toLines(entry.upper, entry.lower) }
-}
-
-export function getHexagramById(id: number): HexagramLines | null {
-  const entry = hexagramsData.find((h) => h.id === id)
   if (!entry) return null
   return { id: entry.id, name: entry.name, lines: toLines(entry.upper, entry.lower) }
 }
@@ -47,7 +63,11 @@ export function listHexagramNames(): string[] {
   return hexagramsData.map((h) => h.name)
 }
 
-/** 阳→少阳(7)、阴→少阴(8)，即静爻起点；动爻由 UI 再翻到 9/6。 */
-export function linesToStaticYaoArray(lines: HexagramLineArray): number[] {
-  return lines.map((line) => (line === 1 ? 7 : 8))
+export function listTrigrams(): Trigram[] {
+  return trigramList
+}
+
+export function getTrigramByLines(lines: HexagramLineArray): Trigram | null {
+  const key = lines.join('')
+  return trigramList.find((trigram) => trigram.lines.join('') === key) ?? null
 }
