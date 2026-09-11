@@ -2,9 +2,9 @@ name: Deploy PWA to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-      - 'claude/**'
+    # 只在 main 上跑：github-pages 环境只允许默认分支部署，
+    # 别的分支跑出来必然失败，还会因为 concurrency 把 main 的部署挤掉。
+    branches: [main]
   workflow_dispatch:
 
 permissions:
