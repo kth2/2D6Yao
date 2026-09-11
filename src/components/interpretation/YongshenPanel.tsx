@@ -2,10 +2,14 @@ import type { ChartEvidence } from '@/engine/yongshen'
 
 const positionLabels = ['初爻', '二爻', '三爻', '四爻', '五爻', '上爻']
 
+/** 支持与反证并排出现，所以除了颜色，前面还要标出「支持 / 反证」，不靠颜色单独承载正反。 */
 function Chips({ items, tone }: { items: readonly string[]; tone: 'support' | 'constraint' }) {
   if (items.length === 0) return null
   return (
-    <div className="flex flex-wrap gap-1">
+    <div className="flex flex-wrap items-center gap-1">
+      <span className="mr-0.5 text-xs text-text-muted">
+        {tone === 'support' ? '支持' : '反证'}
+      </span>
       {items.map((item, index) => (
         <span
           key={index}

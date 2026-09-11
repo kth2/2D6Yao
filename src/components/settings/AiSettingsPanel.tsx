@@ -125,7 +125,7 @@ export function AiSettingsPanel() {
           )}
         </div>
 
-        {error && <p className="text-sm text-broken">读取失败：{error}</p>}
+        {error && <p className="text-sm text-moving">读取失败：{error}</p>}
         {status === 'ready' && freeCount === 0 && (
           <p className="text-xs text-text-muted">
             该服务商的模型清单里没有价格字段，无法自动判断免费额度，请按自己账号的套餐选。

@@ -100,7 +100,7 @@ export function AIReadingPanel({ prompt }: { prompt: string }) {
         <span className="text-xs text-text-muted">{hint}</span>
       </div>
 
-      {error && <p className="text-sm text-broken">调用失败：{error}</p>}
+      {error && <p className="text-sm text-moving">调用失败：{error}</p>}
 
       {exchanges.map((exchange, index) => (
         <div key={index} className="flex flex-col gap-1.5">

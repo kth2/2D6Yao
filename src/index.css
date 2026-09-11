@@ -11,6 +11,7 @@
   --color-text: var(--liuyao-text);
   --color-text-muted: var(--liuyao-text-muted);
   --color-accent: var(--liuyao-accent);
+  --color-accent-ink: var(--liuyao-accent-ink);
 
   --color-yang: var(--liuyao-yang);
   --color-yin: var(--liuyao-yin);

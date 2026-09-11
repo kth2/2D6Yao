@@ -1,67 +1,76 @@
 /**
- * Theme tokens for 六爻 PWA.
- * Two style families (modern / classical) toggled via [data-style] on <html>,
- * each with light/dark variants toggled via [data-theme] or prefers-color-scheme.
+ * 主题取自 logo：宣纸底、墨色字、金色为主调。
+ * 两套风格（modern / classical）× 明暗，由 <html data-style> 与 data-theme 切换。
+ *
+ * 语义色的取值经过对比度与色盲模拟校验：
+ * - accent(金) 与 broken(靛青) 相邻出现（用神的支持/反证），故取蓝黄轴，
+ *   明暗两套的 CVD ΔE 分别 17.5 / 20.2，红色系在暗色下最高只有 7.4，过不了。
+ * - accent 与 moving(朱砂) 在红绿色盲下分不开，动爻另有 ○/× 符号承担区分。
  */
 
 :root {
   --liuyao-font-sans: system-ui, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --liuyao-font-serif: 'Songti SC', 'Noto Serif SC', serif;
+  --liuyao-font-serif: 'Songti SC', 'Noto Serif CJK SC', 'Noto Serif SC', serif;
 
-  --liuyao-bg: #ffffff;
-  --liuyao-surface: #f7f6f9;
-  --liuyao-border: #e5e4e7;
-  --liuyao-text: #1a1523;
-  --liuyao-text-muted: #6b6375;
-  --liuyao-accent: #aa3bff;
+  --liuyao-bg: #fbf8f2;
+  --liuyao-surface: #f2ebdd;
+  --liuyao-border: #ddcfb3;
+  --liuyao-text: #1f1a14;
+  --liuyao-text-muted: #6b5b3f;
+  --liuyao-accent: #7d5f1c;
+  /* 压在 accent 上的文字色，明暗相反，按钮才不会白字压浅金 */
+  --liuyao-accent-ink: #ffffff;
 
-  /* 爻/卦盘专用语义色 */
-  --liuyao-yang: #1a1523;
-  --liuyao-yin: #1a1523;
-  --liuyao-moving: #d4380d;
-  --liuyao-void: #8c8c8c;
-  --liuyao-broken: #d48806;
+  /* 卦盘语义色 */
+  --liuyao-yang: #1f1a14;
+  --liuyao-yin: #1f1a14;
+  --liuyao-moving: #bf3b25;
+  --liuyao-void: #6f6659;
+  --liuyao-broken: #1f4e79;
 }
 
 :root:not([data-theme='light']) {
   @media (prefers-color-scheme: dark) {
-    --liuyao-bg: #16171d;
-    --liuyao-surface: #1f2028;
-    --liuyao-border: #2e303a;
-    --liuyao-text: #f3f4f6;
-    --liuyao-text-muted: #9ca3af;
-    --liuyao-accent: #c084fc;
+    --liuyao-bg: #17150f;
+    --liuyao-surface: #221e16;
+    --liuyao-border: #3b3427;
+    --liuyao-text: #f3ede1;
+    --liuyao-text-muted: #a89a80;
+    --liuyao-accent: #d9b45c;
+    --liuyao-accent-ink: #1a160f;
 
-    --liuyao-yang: #f3f4f6;
-    --liuyao-yin: #f3f4f6;
-    --liuyao-moving: #ff7a45;
-    --liuyao-void: #8c8c8c;
-    --liuyao-broken: #ffc53d;
+    --liuyao-yang: #f3ede1;
+    --liuyao-yin: #f3ede1;
+    --liuyao-moving: #f07a86;
+    --liuyao-void: #9b9283;
+    --liuyao-broken: #7fb0e8;
   }
 }
 
 :root[data-theme='dark'] {
-  --liuyao-bg: #16171d;
-  --liuyao-surface: #1f2028;
-  --liuyao-border: #2e303a;
-  --liuyao-text: #f3f4f6;
-  --liuyao-text-muted: #9ca3af;
-  --liuyao-accent: #c084fc;
+  --liuyao-bg: #17150f;
+  --liuyao-surface: #221e16;
+  --liuyao-border: #3b3427;
+  --liuyao-text: #f3ede1;
+  --liuyao-text-muted: #a89a80;
+  --liuyao-accent: #d9b45c;
+  --liuyao-accent-ink: #1a160f;
 
-  --liuyao-yang: #f3f4f6;
-  --liuyao-yin: #f3f4f6;
-  --liuyao-moving: #ff7a45;
-  --liuyao-void: #8c8c8c;
-  --liuyao-broken: #ffc53d;
+  --liuyao-yang: #f3ede1;
+  --liuyao-yin: #f3ede1;
+  --liuyao-moving: #f07a86;
+  --liuyao-void: #9b9283;
+  --liuyao-broken: #7fb0e8;
 }
 
-/* 古典风格：宣纸底、墨色文字、衬线标题 */
+/* 古典风格：纸色更重，朱砂为主调，正文走衬线 */
 :root[data-style='classical'] {
-  --liuyao-bg: #f4ecd8;
-  --liuyao-surface: #ece0c4;
-  --liuyao-border: #cbb98f;
+  --liuyao-bg: #f4ead2;
+  --liuyao-surface: #ebdfc0;
+  --liuyao-border: #cdb98c;
   --liuyao-text: #2b2118;
   --liuyao-text-muted: #6b5b45;
   --liuyao-accent: #9a2b1f;
+  --liuyao-accent-ink: #fdf8ec;
   --liuyao-font-sans: var(--liuyao-font-serif);
 }
