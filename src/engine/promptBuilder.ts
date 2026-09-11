@@ -1,12 +1,14 @@
 import type { ChartData } from './types'
 import type { ChartTag } from './chartTags'
 import type { RuleMatch } from './corpus'
+import type { ChartEvidence } from './yongshen'
 
 const positionLabels = ['初爻', '二爻', '三爻', '四爻', '五爻', '上爻']
 
 export interface PromptContext {
   questionType?: string
   question?: string
+  evidence?: ChartEvidence
   tags?: readonly ChartTag[]
   matches?: readonly RuleMatch[]
 }
@@ -49,6 +51,37 @@ export function buildChartPrompt(chart: ChartData, context: PromptContext = {}):
 
   if (liuyao.specialAdvice) lines.push('', liuyao.specialAdvice)
 
+  const candidate = context.evidence?.selectedCandidate
+  if (context.evidence && candidate) {
+    lines.push(
+      '',
+      `用神：${candidate.label}${candidate.relative ? `（${candidate.relative}）` : ''} · ${candidate.sourceStatus}`,
+    )
+    for (const ref of candidate.references) {
+      const marks = [
+        ref.isWorld && '世',
+        ref.isResponse && '应',
+        ref.isChanging && '动',
+        ref.isVoid && '空',
+        ref.source === '伏神' && '伏',
+      ].filter(Boolean)
+      let line = `${positionLabels[ref.position - 1]} ${ref.sixRelative}${ref.branch}${ref.wuxing}`
+      if (marks.length > 0) line += `（${marks.join('、')}）`
+      if (ref.support.length > 0) line += ` 支持：${ref.support.join('、')}`
+      if (ref.constraints.length > 0) line += ` 反证：${ref.constraints.join('、')}`
+      lines.push(line)
+    }
+    if (candidate.references.length === 0) lines.push('用神不上卦。')
+    for (const item of context.evidence.godChain) {
+      if (item.role === '用神') continue
+      const where =
+        item.references.length > 0
+          ? `：${item.references.map((ref) => positionLabels[ref.position - 1]).join('、')}`
+          : ''
+      lines.push(`${item.role} ${item.wuxing}（${item.relation}）${item.status}${where}`)
+    }
+  }
+
   if (context.tags && context.tags.length > 0) {
     lines.push('', '卦象标签：')
     for (const tag of context.tags) lines.push(`${tag.label}：${tag.reason}`)
@@ -59,11 +92,18 @@ export function buildChartPrompt(chart: ChartData, context: PromptContext = {}):
     for (const match of context.matches) {
       lines.push(`[${match.rule.id}]（${match.rule.chapter_name}）${match.rule.text}`)
     }
-    lines.push(
-      '',
-      '请只依据以上卦盘与命中条文组织断语，不要自行推演卦理；引用条文时标注编号，条文未涉及处说明依据不足。',
-    )
   }
 
+  lines.push('', buildInstruction())
+
   return lines.join('\n')
+}
+
+/** 与 SCHEMA.md 的分工一致：盘面事实既定，推理归 LLM，但每步要带依据。 */
+function buildInstruction(): string {
+  return [
+    '以上盘面事实由排盘引擎算出，是既定输入：纳甲、六亲、世应、旺衰、旬空、月破日破、伏神、动变一律照用，不要重算或改写。',
+    '请在此基础上推理：先判用神旺衰与生克关系，再权衡命中条文（条文之间可能互相矛盾，需说明为何取此舍彼），然后给出结论与应期。',
+    '每条结论标明依据：「依据 [条文编号]」或「推断」；证据不足处直说不足，不要凑。',
+  ].join('\n')
 }

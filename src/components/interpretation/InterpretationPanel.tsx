@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useChart } from '@/hooks/useChart'
-import { extractChartTags } from '@/engine/chartTags'
+import { extractChartTags, extractEvidenceTags } from '@/engine/chartTags'
 import { listChapters, loadRules, matchRules, type CorpusRule } from '@/engine/corpus'
+import { analyzeEvidence, sixRelatives, type SixRelative } from '@/engine/yongshen'
 import { Button } from '@/components/ui/button'
+import { YongshenPanel } from './YongshenPanel'
 import { ChartTagList } from './ChartTagList'
 import { RuleMatches } from './RuleMatches'
 import { PromptPreview } from './PromptPreview'
@@ -14,6 +16,7 @@ export function InterpretationPanel() {
   const [rules, setRules] = useState<CorpusRule[] | null>(null)
   const [failed, setFailed] = useState(false)
   const [chapter, setChapter] = useState('')
+  const [relative, setRelative] = useState<SixRelative | ''>('')
   const [visible, setVisible] = useState(pageSize)
 
   useEffect(() => {
@@ -31,7 +34,23 @@ export function InterpretationPanel() {
     }
   }, [])
 
-  const tags = useMemo(() => (chart ? extractChartTags(chart.liuyao) : []), [chart])
+  const evidence = useMemo(
+    () =>
+      chart
+        ? analyzeEvidence(chart.liuyao, {
+            chapter: chapter || undefined,
+            relative: relative || undefined,
+          })
+        : null,
+    [chart, chapter, relative],
+  )
+  const tags = useMemo(
+    () =>
+      chart && evidence
+        ? [...extractChartTags(chart.liuyao), ...extractEvidenceTags(evidence)]
+        : [],
+    [chart, evidence],
+  )
   const matches = useMemo(
     () => (rules ? matchRules(rules, tags, chapter || undefined) : []),
     [rules, tags, chapter],
@@ -62,11 +81,28 @@ export function InterpretationPanel() {
               </option>
             ))}
         </select>
+        <span className="shrink-0 text-text-muted">用神</span>
+        <select
+          value={relative}
+          onChange={(e) => {
+            setRelative(e.target.value as SixRelative | '')
+            setVisible(pageSize)
+          }}
+          className="bg-transparent outline-none"
+        >
+          <option value="">按事类自动</option>
+          {sixRelatives.map((name) => (
+            <option key={name} value={name}>
+              {name}
+            </option>
+          ))}
+        </select>
         <span className="ml-auto text-xs text-text-muted">
           {failed ? '条文库载入失败' : rules ? `命中 ${matches.length} 条` : '正在载入条文库…'}
         </span>
       </label>
 
+      {evidence && <YongshenPanel evidence={evidence} />}
       <ChartTagList tags={tags} />
 
       {rules && <RuleMatches matches={shown} tags={tags} />}
@@ -76,7 +112,14 @@ export function InterpretationPanel() {
         </Button>
       )}
 
-      <PromptPreview context={{ questionType: chapter || undefined, tags, matches: shown }} />
+      <PromptPreview
+        context={{
+          questionType: chapter || undefined,
+          evidence: evidence ?? undefined,
+          tags,
+          matches: shown,
+        }}
+      />
     </div>
   )
 }

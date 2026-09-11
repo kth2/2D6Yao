@@ -1,5 +1,6 @@
 import { wuxing } from 'mingyu-core/wuxing'
 import type { LiuyaoChart } from './liuyao'
+import type { ChartEvidence } from './yongshen'
 
 /**
  * 把卦盘折算成资料库同一套标签（见 SCHEMA.md「标签体系」），用于匹配断法条文。
@@ -14,7 +15,6 @@ export interface ChartTag {
 }
 
 const positionLabels = ['初爻', '二爻', '三爻', '四爻', '五爻', '上爻']
-const sixRelatives = ['父母', '兄弟', '子孙', '妻财', '官鬼']
 
 const describe = (yao: { position: number; sixRelative: string; najiaDizhi: string; wuxing: string }) =>
   `${positionLabels[yao.position - 1]}${yao.sixRelative}${yao.najiaDizhi}${yao.wuxing}`
@@ -157,11 +157,39 @@ export function extractChartTags(liuyao: LiuyaoChart): ChartTag[] {
     )
   }
 
-  const missing = sixRelatives.filter((name) => !yaos.some((yao) => yao.sixRelative === name))
-  if (missing.length > 0) add('buashanggua', '不上卦', `${missing.join('、')}不上卦`)
-
   if (liuyao.palaceStage === '游魂') add('youhun', '游魂', '本卦为游魂卦')
   if (liuyao.palaceStage === '归魂') add('guihun', '归魂', '本卦为归魂卦')
+
+  return tags
+}
+
+/** 取定用神之后才谈得上的标签：用神已定、两现、不上卦、原神忌神到位与否。 */
+export function extractEvidenceTags(evidence: ChartEvidence): ChartTag[] {
+  const tags: ChartTag[] = []
+  const add = (id: string, label: string, reason: string) => tags.push({ id, label, reason })
+  const candidate = evidence.selectedCandidate
+  if (!candidate) return tags
+
+  const relative = candidate.relative
+  const refs = candidate.references
+  add('yongshen_declared', '用神', `${candidate.label}${relative ? `（${relative}）` : ''}`)
+
+  if (relative && refs.length === 0) {
+    add('buashanggua', '不上卦', `用神${relative}不上卦`)
+  }
+  if (refs.length > 1) {
+    add(
+      'liangxian',
+      '两现',
+      `用神两现：${refs.map((ref) => `${positionLabels[ref.position - 1]}${ref.branch}${ref.wuxing}`).join('、')}`,
+    )
+  }
+
+  for (const item of evidence.godChain) {
+    if (item.status !== '盘中有对应') continue
+    if (item.role === '原神') add('yuanshen', '原神', `原神${item.wuxing}（${item.relation}）在卦`)
+    if (item.role === '忌神') add('jishen', '忌神', `忌神${item.wuxing}（${item.relation}）在卦`)
+  }
 
   return tags
 }
