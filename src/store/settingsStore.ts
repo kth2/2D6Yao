@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-import { models, type ModelId } from '@/engine/llm'
+import { emptyAiConfig, type AiConfig } from '@/engine/aiProvider'
 
 export type ThemeMode = 'light' | 'dark' | 'system'
 export type StyleFamily = 'modern' | 'classical'
@@ -9,13 +9,11 @@ export type StyleFamily = 'modern' | 'classical'
 interface SettingsStore {
   theme: ThemeMode
   style: StyleFamily
-  /** 用户自己的 Anthropic API key，只存在本机浏览器里，不随卦盘保存。 */
-  apiKey: string
-  model: ModelId
+  /** 接口地址、密钥与模型，只存在本机浏览器里，不随卦盘保存。 */
+  ai: AiConfig
   setTheme: (theme: ThemeMode) => void
   setStyle: (style: StyleFamily) => void
-  setApiKey: (apiKey: string) => void
-  setModel: (model: ModelId) => void
+  setAi: (patch: Partial<AiConfig>) => void
 }
 
 export const useSettingsStore = create<SettingsStore>()(
@@ -23,13 +21,19 @@ export const useSettingsStore = create<SettingsStore>()(
     (set) => ({
       theme: 'system',
       style: 'modern',
-      apiKey: '',
-      model: models[0].id,
+      ai: emptyAiConfig,
       setTheme: (theme) => set({ theme }),
       setStyle: (style) => set({ style }),
-      setApiKey: (apiKey) => set({ apiKey }),
-      setModel: (model) => set({ model }),
+      setAi: (patch) => set((state) => ({ ai: { ...state.ai, ...patch } })),
     }),
-    { name: 'liuyao-settings' },
+    {
+      name: 'liuyao-settings',
+      version: 2,
+      // v1 存的是单一 Anthropic key/model，换成了多服务商配置；主题偏好照旧保留。
+      migrate: (persisted, version) => {
+        const state = persisted as Partial<SettingsStore>
+        return version < 2 ? { ...state, ai: emptyAiConfig } : state
+      },
+    },
   ),
 )

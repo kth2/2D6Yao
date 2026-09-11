@@ -6,6 +6,7 @@ import { SetupPanel } from '@/components/setup/SetupPanel'
 import { ChartView } from '@/components/chart/ChartView'
 import { HistoryList } from '@/components/history/HistoryList'
 import { InterpretationPanel } from '@/components/interpretation/InterpretationPanel'
+import { AiSettingsPanel } from '@/components/settings/AiSettingsPanel'
 
 export function AppShell() {
   useTheme()
@@ -23,6 +24,7 @@ export function AppShell() {
         {tab === 'chart' && <ChartView />}
         {tab === 'interpretation' && <InterpretationPanel />}
         {tab === 'history' && <HistoryList />}
+        {tab === 'settings' && <AiSettingsPanel />}
       </main>
     </div>
   )

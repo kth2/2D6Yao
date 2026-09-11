@@ -1,10 +1,11 @@
-export type NavKey = 'setup' | 'chart' | 'history' | 'interpretation'
+export type NavKey = 'setup' | 'chart' | 'history' | 'interpretation' | 'settings'
 
 const items: Array<{ key: NavKey; label: string }> = [
   { key: 'setup', label: '起卦' },
   { key: 'chart', label: '卦盘' },
   { key: 'interpretation', label: '解卦' },
   { key: 'history', label: '历史' },
+  { key: 'settings', label: '设置' },
 ]
 
 export function NavTabs({ value, onChange }: { value: NavKey; onChange: (key: NavKey) => void }) {
