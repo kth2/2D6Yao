@@ -5,7 +5,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { SetupPanel } from '@/components/setup/SetupPanel'
 import { ChartView } from '@/components/chart/ChartView'
 import { HistoryList } from '@/components/history/HistoryList'
-import { PromptPreview } from '@/components/interpretation/PromptPreview'
+import { InterpretationPanel } from '@/components/interpretation/InterpretationPanel'
 
 export function AppShell() {
   useTheme()
@@ -21,7 +21,7 @@ export function AppShell() {
       <main className="flex-1 px-4 py-4">
         {tab === 'setup' && <SetupPanel onGenerated={() => setTab('chart')} />}
         {tab === 'chart' && <ChartView />}
-        {tab === 'interpretation' && <PromptPreview />}
+        {tab === 'interpretation' && <InterpretationPanel />}
         {tab === 'history' && <HistoryList />}
       </main>
     </div>
