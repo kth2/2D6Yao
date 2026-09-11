@@ -24,11 +24,10 @@ const pageSize = 8
 const caseCount = 3
 
 export function InterpretationPanel() {
-  const { chart } = useChart()
+  const { chart, question, chapter, setQuestion, setChapter } = useChart()
   const [rules, setRules] = useState<CorpusRule[] | null>(null)
   const [cases, setCases] = useState<CorpusCase[] | null>(null)
   const [failed, setFailed] = useState(false)
-  const [chapter, setChapter] = useState('')
   const [relative, setRelative] = useState<SixRelative | ''>('')
   const [visible, setVisible] = useState(pageSize)
 
@@ -93,6 +92,7 @@ export function InterpretationPanel() {
   }
 
   const prompt = buildChartPrompt(chart, {
+    question: question.trim() || undefined,
     questionType: chapter || undefined,
     evidence: evidence ?? undefined,
     tags,
@@ -102,6 +102,16 @@ export function InterpretationPanel() {
 
   return (
     <div className="flex flex-col gap-4">
+      <label className="flex items-center gap-3 rounded-md border border-border px-3 py-2 text-sm">
+        <span className="shrink-0 text-text-muted">问事</span>
+        <input
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder="先写下要问什么，例如：这份工作该不该接？"
+          className="min-w-0 flex-1 bg-transparent outline-none"
+        />
+      </label>
+
       <label className="flex items-center gap-3 rounded-md border border-border px-3 py-2 text-sm">
         <span className="shrink-0 text-text-muted">事类</span>
         <select

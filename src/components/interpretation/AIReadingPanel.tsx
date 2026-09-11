@@ -1,17 +1,11 @@
 import { useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { isConfigured } from '@/engine/aiProvider'
-import { streamReading, type ChatMessage } from '@/engine/llm'
+import { streamReading, type ChatMessage, type ReadingExchange } from '@/engine/llm'
 import { useSettingsStore } from '@/store/settingsStore'
+import { useChartStore } from '@/store/chartStore'
 
 type Status = 'idle' | 'running' | 'done' | 'failed'
-
-/** 一问一答；question 为 null 表示开头那次整卦解读。 */
-interface Exchange {
-  question: string | null
-  thinking: string
-  answer: string
-}
 
 const starterQuestions = [
   '这一卦对我问的事，到底是吉是凶？用大白话说。',
@@ -22,19 +16,20 @@ const starterQuestions = [
 
 export function AIReadingPanel({ prompt }: { prompt: string }) {
   const ai = useSettingsStore((state) => state.ai)
-  const [exchanges, setExchanges] = useState<Exchange[]>([])
-  const [question, setQuestion] = useState('')
+  const { question, exchanges, setExchanges } = useChartStore()
+  const [followUp, setFollowUp] = useState('')
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
   const [openThinking, setOpenThinking] = useState<number | null>(null)
   const abortRef = useRef<AbortController | null>(null)
 
-  const ready = isConfigured(ai)
+  const configured = isConfigured(ai)
+  const asked = question.trim().length > 0
   const running = status === 'running'
   const started = exchanges.length > 0
 
-  /** 把已完成的问答还原成对话历史，首轮的 user 消息是整份卦盘证据。 */
-  const historyFrom = (list: Exchange[]): ChatMessage[] =>
+  /** 还原对话历史：首轮的 user 消息是整份卦盘证据。 */
+  const historyFrom = (list: ReadingExchange[]): ChatMessage[] =>
     list.flatMap((exchange) => [
       { role: 'user' as const, content: exchange.question ?? prompt },
       { role: 'assistant' as const, content: exchange.answer },
@@ -50,23 +45,21 @@ export function AIReadingPanel({ prompt }: { prompt: string }) {
       ...historyFrom(previous),
       { role: 'user', content: nextQuestion ?? prompt },
     ]
-    const pending: Exchange = { question: nextQuestion, thinking: '', answer: '' }
     const index = previous.length
 
-    setExchanges([...previous, pending])
+    setExchanges(() => [...previous, { question: nextQuestion, thinking: '', answer: '' }])
     setError('')
     setStatus('running')
 
-    const update = (patch: (exchange: Exchange) => Exchange) =>
-      setExchanges((list) => list.map((item, i) => (i === index ? patch(item) : item)))
+    const patch = (change: (exchange: ReadingExchange) => ReadingExchange) =>
+      setExchanges((list) => list.map((item, i) => (i === index ? change(item) : item)))
 
     try {
       await streamReading(
         { config: ai, messages, signal: controller.signal },
         {
-          onThinking: (delta) =>
-            update((item) => ({ ...item, thinking: item.thinking + delta })),
-          onText: (delta) => update((item) => ({ ...item, answer: item.answer + delta })),
+          onThinking: (delta) => patch((item) => ({ ...item, thinking: item.thinking + delta })),
+          onText: (delta) => patch((item) => ({ ...item, answer: item.answer + delta })),
         },
       )
       setStatus('done')
@@ -83,14 +76,20 @@ export function AIReadingPanel({ prompt }: { prompt: string }) {
   const ask = (text: string) => {
     const trimmed = text.trim()
     if (!trimmed || running) return
-    setQuestion('')
+    setFollowUp('')
     void send(trimmed)
   }
+
+  const hint = !configured
+    ? '还没配置接口，去「设置」填地址和密钥'
+    : !asked
+      ? '先在上面写下要问什么，断卦要围绕所问之事'
+      : ai.model
 
   return (
     <div className="flex flex-col gap-3 rounded-md border border-border p-3">
       <div className="flex flex-wrap items-center gap-2">
-        <Button onClick={() => void send(null)} disabled={!ready || running}>
+        <Button onClick={() => void send(null)} disabled={!configured || !asked || running}>
           {running && !started ? '正在断卦…' : started ? '重新断卦' : 'AI 断卦'}
         </Button>
         {running && (
@@ -98,9 +97,7 @@ export function AIReadingPanel({ prompt }: { prompt: string }) {
             停止
           </Button>
         )}
-        <span className="text-xs text-text-muted">
-          {ready ? ai.model : '还没配置接口，去「设置」填地址和密钥'}
-        </span>
+        <span className="text-xs text-text-muted">{hint}</span>
       </div>
 
       {error && <p className="text-sm text-broken">调用失败：{error}</p>}
@@ -151,18 +148,19 @@ export function AIReadingPanel({ prompt }: { prompt: string }) {
           </div>
           <div className="flex gap-2">
             <input
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
+              value={followUp}
+              onChange={(e) => setFollowUp(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') ask(question)
+                if (e.key === 'Enter') ask(followUp)
               }}
               placeholder="就这一卦继续问，例如：世爻空亡是什么意思？"
               className="min-w-0 flex-1 rounded-md border border-border bg-transparent px-2 py-1 text-sm outline-none"
             />
-            <Button onClick={() => ask(question)} disabled={running || !question.trim()}>
+            <Button onClick={() => ask(followUp)} disabled={running || !followUp.trim()}>
               发送
             </Button>
           </div>
+          <p className="text-xs text-text-muted">断语要留存的话，去「卦盘」页点「保存到历史」。</p>
         </div>
       )}
     </div>

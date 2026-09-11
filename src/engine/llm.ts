@@ -17,6 +17,13 @@ export interface ChatMessage {
   content: string
 }
 
+/** 一问一答；question 为 null 表示开头那次整卦解读。 */
+export interface ReadingExchange {
+  question: string | null
+  thinking: string
+  answer: string
+}
+
 export interface ReadingRequest {
   config: AiConfig
   /** 首条是卦盘证据，其后是追问与回答，供多轮问答沿用同一份卦。 */

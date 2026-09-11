@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useChart } from '@/hooks/useChart'
+import { hasChangedHexagram } from '@/engine/liuyao'
 import { HexagramColumn } from './HexagramColumn'
 import { ShenshaList } from './ShenshaList'
 import { RelationsPanel } from './RelationsPanel'
@@ -19,11 +20,11 @@ export function ChartView() {
   }
 
   const { liuyao, shensha } = chart
-  const hasChanged = Boolean(liuyao.changedName)
+  const hasChanged = hasChangedHexagram(liuyao)
 
   return (
     <div className="flex flex-col gap-4">
-      <SaveChartBar chart={chart} />
+      <SaveChartBar />
 
       <div className="flex items-center justify-between">
         <ShenshaList shensha={shensha} />

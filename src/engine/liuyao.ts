@@ -9,3 +9,11 @@ export type LiuyaoChart = ReturnType<typeof generateLiuyao>
 export function computeLiuyao(date?: Date, options?: LiuyaoGenerationOptions): LiuyaoChart {
   return generateLiuyao(date, options)
 }
+
+/**
+ * 是否真有变卦。静卦时 mingyu-core 仍会把 changedName 填成本卦名，
+ * 不能拿 changedName 有没有值来判断，要看有没有动爻。
+ */
+export function hasChangedHexagram(liuyao: LiuyaoChart): boolean {
+  return liuyao.yaosDetail.some((yao) => yao.isChanging)
+}

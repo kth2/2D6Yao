@@ -1,3 +1,4 @@
+import { hasChangedHexagram } from './liuyao'
 import type { ChartData } from './types'
 import type { ChartTag } from './chartTags'
 import type { CaseMatch, RuleMatch } from './corpus'
@@ -22,7 +23,7 @@ export function buildChartPrompt(chart: ChartData, context: PromptContext = {}):
   if (context.question) lines.push(`问事：${context.question}`)
   if (context.questionType) lines.push(`事类：${context.questionType}`)
   lines.push(`本卦：${liuyao.originalName}（${liuyao.palace.name}宫）`)
-  if (liuyao.changedName) lines.push(`变卦：${liuyao.changedName}`)
+  lines.push(hasChangedHexagram(liuyao) ? `变卦：${liuyao.changedName}` : '变卦：无（静卦）')
   lines.push(
     `四柱：${liuyao.ganzhi.year} ${liuyao.ganzhi.month} ${liuyao.ganzhi.day} ${liuyao.ganzhi.hour}`,
   )
