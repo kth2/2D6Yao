@@ -15,7 +15,15 @@ export function AppShell() {
   return (
     <div className="mx-auto flex min-h-svh max-w-4xl flex-col">
       <header className="flex items-center justify-between px-4 py-3">
-        <h1 className="text-lg font-medium">六爻预测</h1>
+        <div className="flex items-center gap-2">
+          {/* public/ 下的资源要带 BASE_URL，子目录部署才找得到。 */}
+          <img
+            src={`${import.meta.env.BASE_URL}mark.svg`}
+            alt=""
+            className="size-8 rounded-lg border border-border"
+          />
+          <h1 className="text-lg font-medium">六爻预测</h1>
+        </div>
         <ThemeToggle />
       </header>
       <NavTabs value={tab} onChange={setTab} />
