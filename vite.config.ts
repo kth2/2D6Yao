@@ -18,7 +18,6 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo.svg', 'mark.svg', 'apple-touch-icon.png'],
       manifest: {
         name: '六爻预测',
         short_name: '六爻',
@@ -44,7 +43,15 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         // 大字库（康熙笔画约 1.2MB、卦例库约 1.8MB）不进预缓存，用到才下载，用过再离线缓存。
-        globIgnores: ['**/name-number-*.js', '**/cases-*.js'],
+        // 安装用的图标由浏览器在安装时抓取，装完系统自己留副本；logo.png 只是出图标的原稿，
+        // 页面都不引用，所以一起排除，预缓存里只留界面真正要用的 mark.png。
+        globIgnores: [
+          '**/name-number-*.js',
+          '**/cases-*.js',
+          'logo.png',
+          'pwa-*.png',
+          'apple-touch-icon.png',
+        ],
         runtimeCaching: [
           {
             urlPattern: /\/assets\/name-number-.*\.js$/,

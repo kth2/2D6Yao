@@ -18,7 +18,7 @@ export function AppShell() {
         <div className="flex items-center gap-2">
           {/* public/ 下的资源要带 BASE_URL，子目录部署才找得到。 */}
           <img
-            src={`${import.meta.env.BASE_URL}mark.svg`}
+            src={`${import.meta.env.BASE_URL}mark.png`}
             alt=""
             className="size-8 rounded-lg border border-border"
           />
