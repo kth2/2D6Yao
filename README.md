@@ -1,6 +1,43 @@
-# 六爻800例 资料库
+# 六爻预测 PWA
 
-从《六爻800例—高级技法解析》（淮源子，782 页 PDF）提取的结构化语料 + 规则表 + 可复跑管线。
+传统六爻起卦、排盘、断卦的 Progressive Web App。
+
+## 运行
+
+```bash
+npm install
+npm run dev      # 本地开发，http://localhost:5173
+npm run build    # 生产构建（含 PWA/Service Worker）
+npm run lint      # oxlint 检查
+```
+
+## 技术栈与结构
+
+- Vite + React 19 + TypeScript + Tailwind CSS v4
+- **mingyu-core** 作为六爻排盘 / 神煞 / 历法的计算引擎（`src/engine/` 是唯一调用入口，UI 不直接碰底层库）
+- zustand 做状态、Dexie（IndexedDB）做本地历史记录、vite-plugin-pwa 提供离线/安装能力
+- 断卦调用 Claude（`@anthropic-ai/sdk`，流式）。API key 由用户自己填，只存在本机浏览器
+  的 localStorage 里，浏览器直连 Anthropic，不经任何中转；不填也能用，复制提示词自己去问。
+
+```
+src/
+  engine/       起卦与排盘的纯计算层（不依赖 React）
+  store/        zustand：当前卦盘 / 历史记录 / 主题设置
+  db/           Dexie 本地历史记录 schema
+  components/
+    setup/      卦盘设置：按时间/投币/手动/选卦 起卦，动爻勾选
+    chart/      卦盘详情：本卦/变卦 并排或标签视图，逐爻可点开详情
+    interpretation/  取用神 → 卦象标签 → 命中条文 → 相似书例 → 提示词/调用 Claude 断卦
+    history/    历史记录列表
+    layout/     应用外壳、导航、主题切换
+    ui/         基础 UI 组件
+data/           六爻800例 语料库（见下）
+```
+
+## 语料库（六爻800例）
+
+从《六爻800例—高级技法解析》（淮源子，782 页 PDF）提取的结构化语料 + 规则表，现放在 `data/` 下
+（`book-1.txt` `cases.jsonl` `rules.jsonl` `gua64.json` `index.json`），供未来的断卦规则匹配/书例检索使用。
 
 ```
 corpus/
