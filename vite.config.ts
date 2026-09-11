@@ -7,8 +7,12 @@ import { defineConfig } from 'vite'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// GitHub Pages 把站点挂在 /<repo>/ 下，由部署工作流传入；本地开发仍是根路径。
+const base = process.env.BASE_PATH ?? '/'
+
 // https://vite.dev/config/
 export default defineConfig({
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -20,15 +24,17 @@ export default defineConfig({
         short_name: '六爻',
         description: '传统六爻占卜排盘与解卦 PWA',
         lang: 'zh-CN',
-        start_url: '/',
+        // 相对路径，这样挂在 /2D6Yao/ 子目录下也能正确安装。
+        start_url: '.',
+        scope: '.',
         display: 'standalone',
         background_color: '#16171d',
         theme_color: '#aa3bff',
         icons: [
-          { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
           {
-            src: '/pwa-512x512.png',
+            src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
