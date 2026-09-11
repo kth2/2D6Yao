@@ -37,6 +37,15 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        // 汉字起卦的康熙笔画字库约 1.2MB，只有用到才下载，用过再离线缓存。
+        globIgnores: ['**/name-number-*.js'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/name-number-.*\.js$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'kangxi-strokes', expiration: { maxEntries: 2 } },
+          },
+        ],
       },
     }),
   ],

@@ -1,10 +1,13 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
-export type SetupMethod = 'time' | 'manual' | 'coins' | 'pick'
+export type SetupMethod = 'time' | 'coins' | 'yarrow' | 'number' | 'character' | 'manual' | 'pick'
 
 const items: Array<{ key: SetupMethod; label: string }> = [
   { key: 'time', label: '按时间起卦' },
   { key: 'coins', label: '投币摇卦' },
+  { key: 'yarrow', label: '蓍草揲卦' },
+  { key: 'number', label: '数字起卦' },
+  { key: 'character', label: '汉字起卦' },
   { key: 'manual', label: '手动输入' },
   { key: 'pick', label: '直接选卦' },
 ]

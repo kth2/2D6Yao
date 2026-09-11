@@ -18,6 +18,11 @@ export function fromTime(): LiuyaoGenerationOptions {
   return { method: 'time' }
 }
 
+/** 蓍草十八变（大衍之数四十九策），分堆由引擎完成。 */
+export function fromYarrow(): LiuyaoGenerationOptions {
+  return { method: 'yarrow' }
+}
+
 /** 直接选定本卦（按卦名），起始为全静爻，动爻由用户在设置里再勾选。 */
 export function fromHexagramName(name: string): LiuyaoGenerationOptions | null {
   const hexagram = getHexagramByName(name)

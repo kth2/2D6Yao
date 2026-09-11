@@ -32,6 +32,17 @@ export function getHexagramById(id: number): HexagramLines | null {
   return { id: entry.id, name: entry.name, lines: toLines(entry.upper, entry.lower) }
 }
 
+export function getHexagramByLines(lines: HexagramLineArray): HexagramLines | null {
+  const key = lines.join('')
+  for (const entry of hexagramsData) {
+    const entryLines = toLines(entry.upper, entry.lower)
+    if (entryLines.join('') === key) {
+      return { id: entry.id, name: entry.name, lines: entryLines }
+    }
+  }
+  return null
+}
+
 export function listHexagramNames(): string[] {
   return hexagramsData.map((h) => h.name)
 }

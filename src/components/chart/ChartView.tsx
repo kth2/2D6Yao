@@ -4,6 +4,7 @@ import { HexagramColumn } from './HexagramColumn'
 import { ShenshaList } from './ShenshaList'
 import { RelationsPanel } from './RelationsPanel'
 import { VoidBreakIndicators } from './VoidBreakIndicators'
+import { SaveChartBar } from '@/components/history/SaveChartBar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
 
@@ -22,6 +23,8 @@ export function ChartView() {
 
   return (
     <div className="flex flex-col gap-4">
+      <SaveChartBar chart={chart} />
+
       <div className="flex items-center justify-between">
         <ShenshaList shensha={shensha} />
         {hasChanged && (
