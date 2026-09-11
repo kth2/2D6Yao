@@ -1,17 +1,8 @@
 import { useState } from 'react'
-import { useChart } from '@/hooks/useChart'
-import { buildChartPrompt, type PromptContext } from '@/engine/promptBuilder'
 import { Button } from '@/components/ui/button'
 
-export function PromptPreview({ context }: { context?: PromptContext }) {
-  const { chart } = useChart()
+export function PromptPreview({ prompt }: { prompt: string }) {
   const [copied, setCopied] = useState(false)
-
-  if (!chart) {
-    return <p className="text-sm text-text-muted">还没有卦盘，先去「起卦」生成一个。</p>
-  }
-
-  const prompt = buildChartPrompt(chart, context)
 
   return (
     <div className="flex flex-col gap-3">

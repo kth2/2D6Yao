@@ -16,6 +16,8 @@ npm run lint      # oxlint 检查
 - Vite + React 19 + TypeScript + Tailwind CSS v4
 - **mingyu-core** 作为六爻排盘 / 神煞 / 历法的计算引擎（`src/engine/` 是唯一调用入口，UI 不直接碰底层库）
 - zustand 做状态、Dexie（IndexedDB）做本地历史记录、vite-plugin-pwa 提供离线/安装能力
+- 断卦调用 Claude（`@anthropic-ai/sdk`，流式）。API key 由用户自己填，只存在本机浏览器
+  的 localStorage 里，浏览器直连 Anthropic，不经任何中转；不填也能用，复制提示词自己去问。
 
 ```
 src/
@@ -25,7 +27,7 @@ src/
   components/
     setup/      卦盘设置：按时间/投币/手动/选卦 起卦，动爻勾选
     chart/      卦盘详情：本卦/变卦 并排或标签视图，逐爻可点开详情
-    interpretation/  卦象标签 → 命中断法条文 → 结构化提示词（复制给 LLM 用）
+    interpretation/  取用神 → 卦象标签 → 命中条文 → 相似书例 → 提示词/调用 Claude 断卦
     history/    历史记录列表
     layout/     应用外壳、导航、主题切换
     ui/         基础 UI 组件

@@ -17,6 +17,8 @@ import { ChartTagList } from './ChartTagList'
 import { RuleMatches } from './RuleMatches'
 import { CaseMatches } from './CaseMatches'
 import { PromptPreview } from './PromptPreview'
+import { AIReadingPanel } from './AIReadingPanel'
+import { buildChartPrompt } from '@/engine/promptBuilder'
 
 const pageSize = 8
 const caseCount = 3
@@ -90,6 +92,14 @@ export function InterpretationPanel() {
     return <p className="text-sm text-text-muted">还没有卦盘，先去「起卦」生成一个。</p>
   }
 
+  const prompt = buildChartPrompt(chart, {
+    questionType: chapter || undefined,
+    evidence: evidence ?? undefined,
+    tags,
+    matches: shown,
+    cases: caseMatches,
+  })
+
   return (
     <div className="flex flex-col gap-4">
       <label className="flex items-center gap-3 rounded-md border border-border px-3 py-2 text-sm">
@@ -148,15 +158,8 @@ export function InterpretationPanel() {
         {cases && <CaseMatches matches={caseMatches} tags={tags} />}
       </div>
 
-      <PromptPreview
-        context={{
-          questionType: chapter || undefined,
-          evidence: evidence ?? undefined,
-          tags,
-          matches: shown,
-          cases: caseMatches,
-        }}
-      />
+      <AIReadingPanel prompt={prompt} />
+      <PromptPreview prompt={prompt} />
     </div>
   )
 }
