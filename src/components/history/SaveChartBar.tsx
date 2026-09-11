@@ -28,7 +28,12 @@ export function SaveChartBar({ chart }: { chart: ChartData }) {
         placeholder="问事，例如：问今年财运"
         className="w-full bg-transparent outline-none"
       />
-      <Button size="sm" disabled={saved || saving} onClick={() => void handleSave()}>
+      <Button
+        size="sm"
+        className="shrink-0 whitespace-nowrap"
+        disabled={saved || saving}
+        onClick={() => void handleSave()}
+      >
         {saved ? '已保存' : saving ? '保存中…' : '保存到历史'}
       </Button>
     </div>

@@ -12,9 +12,15 @@ export interface ReadingHandlers {
   onText: (delta: string) => void
 }
 
+export interface ChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
 export interface ReadingRequest {
   config: AiConfig
-  prompt: string
+  /** 首条是卦盘证据，其后是追问与回答，供多轮问答沿用同一份卦。 */
+  messages: ChatMessage[]
   signal?: AbortSignal
 }
 
@@ -28,7 +34,7 @@ export async function streamReading(
 
 /** Anthropic 原生接口，用官方 SDK，开自适应思考。 */
 async function streamAnthropic(
-  { config, prompt, signal }: ReadingRequest,
+  { config, messages, signal }: ReadingRequest,
   handlers: ReadingHandlers,
 ): Promise<void> {
   const { default: Anthropic } = await import('@anthropic-ai/sdk')
@@ -44,7 +50,7 @@ async function streamAnthropic(
       max_tokens: 32000,
       thinking: { type: 'adaptive', display: 'summarized' },
       system: systemPrompt,
-      messages: [{ role: 'user', content: prompt }],
+      messages,
     },
     { signal },
   )
@@ -66,7 +72,7 @@ interface OpenAiDelta {
 
 /** OpenAI 兼容接口：POST {base}/chat/completions，手工解 SSE。 */
 async function streamOpenAiCompatible(
-  { config, prompt, signal }: ReadingRequest,
+  { config, messages, signal }: ReadingRequest,
   handlers: ReadingHandlers,
 ): Promise<void> {
   const base = normalizeBaseUrl(config.baseUrl)
@@ -80,10 +86,7 @@ async function streamOpenAiCompatible(
     body: JSON.stringify({
       model: config.model,
       stream: true,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: prompt },
-      ],
+      messages: [{ role: 'system', content: systemPrompt }, ...messages],
     }),
   })
 

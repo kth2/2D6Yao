@@ -27,8 +27,9 @@ export function HexagramColumn({
         specialPattern={variant === 'original' ? liuyao.specialPattern : undefined}
       />
       <FourPillarsBar ganzhi={liuyao.ganzhi} voidBranches={liuyao.voidBranches} />
+      {/* yaosDetail 是初爻→上爻；flex-col-reverse 让上爻显示在最上，与传统卦盘一致。 */}
       <div className="flex flex-col-reverse gap-1">
-        {[...liuyao.yaosDetail].reverse().map((yao) => {
+        {liuyao.yaosDetail.map((yao) => {
           const showChanged = variant === 'changed' && yao.isChanging && yao.changedYao
           const hidden = liuyao.hiddenSpirits?.find((s) => s.underYao.position === yao.position)
           return (
