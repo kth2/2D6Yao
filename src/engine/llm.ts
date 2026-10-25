@@ -104,8 +104,10 @@ async function streamOpenAiCompatible(
 
   if (!response.ok || !response.body) {
     const detail = await response.text().catch(() => '')
-    throw new Error(
+    throw new HttpError(
+      response.status,
       `${response.status} ${response.statusText}${detail ? ` — ${detail.slice(0, 300)}` : ''}`,
+      retryAfterMs(response.headers.get('retry-after'), detail),
     )
   }
 
@@ -144,4 +146,25 @@ async function streamOpenAiCompatible(
       }
     }
   }
+}
+
+/** 带状态码的接口错误：回测要据此区分「等一分钟再试」和「今天的额度用完了」。 */
+export class HttpError extends Error {
+  readonly status: number
+  /** 服务商建议的等待时间（Retry-After 头，或 Gemini 错误体里的 retryDelay）。 */
+  readonly retryAfterMs?: number
+
+  constructor(status: number, message: string, retryAfterMs?: number) {
+    super(message)
+    this.name = 'HttpError'
+    this.status = status
+    this.retryAfterMs = retryAfterMs
+  }
+}
+
+function retryAfterMs(header: string | null, body: string): number | undefined {
+  const seconds = header ? Number(header) : Number.NaN
+  if (Number.isFinite(seconds) && seconds >= 0) return seconds * 1000
+  const delay = /"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"/.exec(body)
+  return delay ? Number(delay[1]) * 1000 : undefined
 }

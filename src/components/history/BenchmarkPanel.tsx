@@ -76,9 +76,15 @@ export function BenchmarkPanel({ readings }: { readings: readonly SavedReading[]
       </div>
 
       {runningId !== null && (
-        <p className="text-xs text-text-muted">
-          正在断：{current || '准备中'}（{done}/{total}）
-        </p>
+        <div className="flex flex-col gap-0.5 text-xs">
+          <p className="text-text-muted">
+            正在断：{current || '准备中'}（{done}/{total}）
+          </p>
+          <p className="text-text-muted">
+            跑完之前请让这一页留在前台：锁屏或切去别的应用，手机可能会把页面挂起，正在等的那道就断了。
+            已尝试保持屏幕常亮；万一断了，重开后点「继续」。
+          </p>
+        </div>
       )}
       {error && <p className="text-xs text-moving">{error}</p>}
 
@@ -149,12 +155,26 @@ function RunCard({
       <p className="text-xs text-text-muted">
         已跑 {summary.done} / {summary.total}
         {running ? '，进行中' : run.finishedAt ? '，已完成' : '，未跑完'}
+        {!running && run.lastActivityAt && !run.finishedAt
+          ? `（最后一次活动 ${new Date(run.lastActivityAt).toLocaleString('zh-CN')}）`
+          : ''}
       </p>
+      {unfinished && (
+        <p className="text-xs text-moving">
+          中断原因：
+          {run.lastError ?? '没有记下原因 —— 多半是页面被关掉，或手机切到后台时被系统挂起'}
+        </p>
+      )}
+      {(run.notes ?? []).map((note) => (
+        <p key={note} className="text-xs text-text-muted">
+          注：{note}
+        </p>
+      ))}
 
       <div className="flex flex-wrap gap-2">
         {unfinished && (
-          <Button size="sm" variant="outline" onClick={onResume} disabled={!canResume}>
-            继续
+          <Button size="sm" onClick={onResume} disabled={!canResume}>
+            继续（还剩 {summary.total - summary.done} 道）
           </Button>
         )}
         <Button size="sm" variant="ghost" onClick={() => setOpen(!open)}>

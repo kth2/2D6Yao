@@ -26,6 +26,46 @@ export interface BenchmarkRun {
   appVersion: string
   caseIds: number[]
   results: BenchmarkResult[]
+  /**
+   * 最后一次活动的时间与中断原因。上一轮回测「0 道完成、0 道出错」，却没留下任何线索 ——
+   * 页面被切到后台杀掉、请求卡住、书例库没载入，三种都可能。现在每一步都落盘。
+   */
+  lastActivityAt?: number
+  lastError?: string
+  /** 本轮的特殊情况，比如书例库没载入、只能不带书例跑。 */
+  notes?: string[]
+}
+
+export type FailureKind = 'rate' | 'quota' | 'auth' | 'timeout' | 'network' | 'other'
+
+export interface Failure {
+  kind: FailureKind
+  message: string
+  retryAfterMs?: number
+}
+
+/**
+ * 把一次失败归类，决定是等一会儿重试、跳过这道，还是整轮暂停：
+ * 每分钟限额（429）等一分钟再试；当天额度用完、密钥不对就停；
+ * 网络中断（多半是手机切了后台）与超时稍等重试。
+ */
+export function classifyFailure(cause: unknown): Failure {
+  const error = cause as { status?: number; name?: string; message?: string; retryAfterMs?: number }
+  const message = error?.message ?? String(cause)
+  const status = typeof error?.status === 'number' ? error.status : undefined
+  if (status === 401 || status === 403) return { kind: 'auth', message }
+  if (status === 429 || /rate.?limit|too many requests/i.test(message)) {
+    if (/per.?day|daily|exceeded your current quota|insufficient_quota|billing/i.test(message)) {
+      return { kind: 'quota', message }
+    }
+    return { kind: 'rate', message, retryAfterMs: error?.retryAfterMs }
+  }
+  if (/quota|insufficient/i.test(message)) return { kind: 'quota', message }
+  if (error?.name === 'TimeoutError' || /time(d)?\s?out/i.test(message)) return { kind: 'timeout', message }
+  if (error?.name === 'TypeError' || /failed to fetch|load failed|network|connection/i.test(message)) {
+    return { kind: 'network', message }
+  }
+  return { kind: 'other', message }
 }
 
 /** 能回测的卦：是非题、记了实际吉凶。 */
